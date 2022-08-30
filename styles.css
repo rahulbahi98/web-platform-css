@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: black;
+  background: linear-gradient(to right, #00aaff, #00ff6c);
+}
+
+.table {
+  margin: 10px;
+  border-collapse: collapse;
+  font-size: 1em;
+  min-width: 300px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.table thead tr {
+  background-color: #009879;
+  border-radius: 5px;
+  text-align: left;
+  color: floralwhite;
+}
+
+.table th,
+.table td {
+  padding: 10px 20px;
+}
+
+.table tbody tr td {
+  border-bottom: 1px solid lightgray;
+}
+
+.table tbody tr:nth-of-type(even) {
+}
+
+.table tbody tr:nth-last-of-type() {
+  border-bottom: 3px #009879 solid;
+}
+
+.container {
+  border: 1px red solid;
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 80px);
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+.output {
+  grid-column: 1/-1;
+  border: 1px solid lightgray;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  color: white;
+}
+
+.container > input[type='button'] {
+  outline: none;
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.container > input[type='button']:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.output .prev {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+
+.output .current {
+  font-size: 2.5rem;
+}
